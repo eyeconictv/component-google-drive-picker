@@ -1,5 +1,19 @@
 # Google Drive Picker [![Circle CI](https://circleci.com/gh/Rise-Vision/component-google-drive-picker/tree/master.svg?style=svg)](https://circleci.com/gh/Rise-Vision/component-google-drive-picker/tree/master)
 
+## Quick Setup
+### Built With
+- Nodejs 6.17.1
+- NPM (node package manager)
+- `npm install -g bower`
+
+### Install Packages
+- `npm install`
+- `bower install`
+
+
+### Build
+- `npm run build`
+
 ## Introduction
 
 Google Drive Picker is an Angular directive that provides a button to launch the [Google Picker](https://developers.google.com/picker/docs/) modal so a user can select a file based on a file type (eg. spreadsheets). The file type needs to correspond to what Google offer as available [ViewIds](https://developers.google.com/picker/docs/reference#ViewId).
