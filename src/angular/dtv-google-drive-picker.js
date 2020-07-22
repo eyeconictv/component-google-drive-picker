@@ -29,8 +29,7 @@
           }
 
           function createPicker(google) {
-            var parser = document.createElement("a"),
-              origin,
+            var origin,
               picker;
 
               if (document.referrer) {
