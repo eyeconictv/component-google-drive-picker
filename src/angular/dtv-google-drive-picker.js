@@ -9,7 +9,7 @@
         restrict: "E",
         scope: {
           viewId: "@",
-          topConfig: '='
+          topConfig: "="
         },
         template: $templateCache.get("google-drive-picker-template.html"),
         link: function (scope, $element, attrs) {
@@ -33,9 +33,9 @@
             var origin,
               picker;
 
-              if(topConfig && topConfig.origin){
-                origin = topConfig.origin;
-              }else{
+              if (scope.topConfig && scope.topConfig.origin) {
+                origin = scope.topConfig.origin;
+              } else {
                 if (document.referrer) {
                   // if (document.location.hostname === "localhost") {
                     // Component is within an iframe, but likely within a widget settings tested locally (localhost:8000)
