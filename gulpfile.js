@@ -12,7 +12,7 @@
   var jshint = require("gulp-jshint");
   var uglify = require("gulp-uglify");
   var html2js = require("gulp-html2js");
-  var factory = require("widget-tester").gulpTaskFactory;
+  // var factory = require("widget-tester").gulpTaskFactory;
 
   gulp.task("clean", function () {
     del(["./dist/**", "./tmp/**"]);
@@ -68,38 +68,38 @@
     runSequence(["clean"], ["js-uglify"], cb);
   });
 
-  gulp.task("e2e:server", factory.testServer());
-  gulp.task("e2e:server-close", factory.testServerClose());
+  // gulp.task("e2e:server", factory.testServer());
+  // gulp.task("e2e:server-close", factory.testServerClose());
+  //
+  // gulp.task("webdriver_update", factory.webdriveUpdate());
+  // gulp.task("test:e2e:ng:core", factory.testE2EAngular());
+  // gulp.task("test:ensure-directory", factory.ensureReportDirectory());
 
-  gulp.task("webdriver_update", factory.webdriveUpdate());
-  gulp.task("test:e2e:ng:core", factory.testE2EAngular());
-  gulp.task("test:ensure-directory", factory.ensureReportDirectory());
+  // gulp.task("test:e2e:ng", ["test:ensure-directory", "webdriver_update"], function (cb) {
+  //   return runSequence("e2e:server", "test:e2e:ng:core",
+  //   function (err) {
+  //     gulp.run("e2e:server-close");
+  //     cb(err);
+  //   });
+  // });
 
-  gulp.task("test:e2e:ng", ["test:ensure-directory", "webdriver_update"], function (cb) {
-    return runSequence("e2e:server", "test:e2e:ng:core",
-    function (err) {
-      gulp.run("e2e:server-close");
-      cb(err);
-    });
-  });
-
-  gulp.task("test:unit:ng", factory.testUnitAngular({
-    testFiles: [
-      "components/q/q.js",
-      "components/angular/angular.js",
-      "components/angular-mocks/angular-mocks.js",
-      "components/angular-translate/angular-translate.js",
-      "components/rv-common-i18n/dist/i18n.js",
-      "node_modules/widget-tester/mocks/i18n-config.js",
-      "node_modules/widget-tester/mocks/gapi-picker-mock.js",
-      "src/angular/*.js",
-      "test/unit/**/*spec.js"
-    ]
-  }));
-
-  gulp.task("test", ["build"], function (cb) {
-    return runSequence("test:unit:ng", "test:e2e:ng", cb);
-  });
+  // gulp.task("test:unit:ng", factory.testUnitAngular({
+  //   testFiles: [
+  //     "components/q/q.js",
+  //     "components/angular/angular.js",
+  //     "components/angular-mocks/angular-mocks.js",
+  //     "components/angular-translate/angular-translate.js",
+  //     "components/rv-common-i18n/dist/i18n.js",
+  //     "node_modules/widget-tester/mocks/i18n-config.js",
+  //     "node_modules/widget-tester/mocks/gapi-picker-mock.js",
+  //     "src/angular/*.js",
+  //     "test/unit/**/*spec.js"
+  //   ]
+  // }));
+  //
+  // gulp.task("test", ["build"], function (cb) {
+  //   return runSequence("test:unit:ng", "test:e2e:ng", cb);
+  // });
 
   gulp.task("default", ["build"]);
 

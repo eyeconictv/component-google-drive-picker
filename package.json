@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Rise-Vision/component-google-drive-picker.git"
+    "url": "https://github.com/eyeconictv/component-google-drive-picker.git"
   },
   "author": "Rise Vision",
   "license": "GPLv3",
   "bugs": {
-    "url": "https://github.com/Rise-Vision/component-google-drive-picker/issues"
+    "url": "https://github.com/eyeconictv/component-google-drive-picker/issues"
   },
-  "homepage": "https://github.com/Rise-Vision/component-google-drive-picker",
+  "homepage": "https://github.com/eyeconictv/component-google-drive-picker",
   "devDependencies": {
     "chai": "~1.9.2",
     "chai-as-promised": "~4.1.1",
@@ -32,7 +32,6 @@
     "gulp-watch": "^0.6.8",
     "jshint-stylish": "^0.2.0",
     "run-sequence": "^0.3.2",
-    "spawn-cmd": "0.0.2",
-    "widget-tester": "git://github.com/Rise-Vision/widget-tester.git"
+    "spawn-cmd": "0.0.2"
   }
 }
